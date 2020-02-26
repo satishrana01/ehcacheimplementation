@@ -1,0 +1,25 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true"
+         monitoring="autodetect" dynamicConfig="true">
+
+    <diskStore path="java.io.tmpdir" />
+   <!-- <diskStore path="c:\\cache" />-->
+
+    <cache name="fraudCriteriaCache"
+           maxElementsInMemory="50"
+           overflowToDisk="false" eternal="false"
+           timeToLiveSeconds="60"
+           timeToIdleSeconds="60"
+           statistics="true" diskPersistent="false"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <cache name="fraudCriteriaCache12"
+           maxElementsInMemory="10"
+           overflowToDisk="false" eternal="false"
+           timeToLiveSeconds="60"
+           timeToIdleSeconds="60"
+           memoryStoreEvictionPolicy="LFU"
+           statistics="true" diskPersistent="false" />
+
+</ehcache>
